@@ -1,5 +1,5 @@
 
-import api from '../../api/imgur';
+import api from '../../api/google';
 
 const state = {
   images: []

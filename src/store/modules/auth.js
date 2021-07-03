@@ -1,4 +1,4 @@
-import api from '../../api/imgur';
+import api from '../../api/google';
 import qs from 'qs';
 import {router} from '../../main';
 
