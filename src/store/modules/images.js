@@ -1,7 +1,8 @@
 
-import api from '../../api/imgur'
+import api from '../../api/imgur';
+
 const state = {
-images = []
+  images: []
 }
 
 const getters = {
@@ -10,8 +11,8 @@ allImages: state => state.images
 
 const actions = {
 
-    async fetchImages() {
-    const {token} = rootSate.auth;
+    async fetchImages({rootState}) {
+    const {token} = rootState.auth;
     const response = await api.fetchImages(token);
     console.log(response)
     }
@@ -22,4 +23,11 @@ const mutations = {
  setImages: (state, images) => {
      state.images = images;
  }
+}
+
+export default {
+    state,
+    getters,
+    actions,
+    mutations
 }
